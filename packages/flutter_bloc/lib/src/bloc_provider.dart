@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter_web/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:provider/provider.dart';
 import 'package:bloc/bloc.dart';

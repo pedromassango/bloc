@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_web/widgets.dart';
 import 'package:provider/provider.dart';
 
 /// Signature for the listener function which takes the [BuildContext] along with the bloc state
