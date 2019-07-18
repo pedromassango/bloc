@@ -91,7 +91,7 @@ void main() {
         (WidgetTester tester) async {
       try {
         await tester.pumpWidget(
-          BlocListener<dynamic, dynamic>(
+          BlocListener<Bloc, dynamic>(
             bloc: null,
             listener: null,
             child: null,
@@ -107,7 +107,7 @@ void main() {
         (WidgetTester tester) async {
       try {
         await tester.pumpWidget(
-          BlocListener(
+          BlocListener<CounterBloc, int>(
             bloc: CounterBloc(),
             listener: null,
             child: null,

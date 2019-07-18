@@ -127,7 +127,7 @@ class MyCounterAppState extends State<MyCounterApp> {
         key: Key('myCounterApp'),
         body: Column(
           children: <Widget>[
-            BlocBuilder<CounterEvent, int>(
+            BlocBuilder<CounterBloc, int>(
               bloc: _bloc,
               condition: (previousState, currentState) {
                 return (previousState + currentState) % 3 == 0;
@@ -136,7 +136,7 @@ class MyCounterAppState extends State<MyCounterApp> {
                 return Text('$count', key: Key('myCounterAppTextCondition'));
               },
             ),
-            BlocBuilder<CounterEvent, int>(
+            BlocBuilder<CounterBloc, int>(
               bloc: _bloc,
               builder: (context, count) {
                 return Text('$count', key: Key('myCounterAppText'));
@@ -180,7 +180,7 @@ void main() {
         (WidgetTester tester) async {
       try {
         await tester.pumpWidget(
-          BlocBuilder<ThemeEvent, ThemeData>(
+          BlocBuilder<ThemeBloc, ThemeData>(
             bloc: null,
             builder: null,
           ),
@@ -194,7 +194,7 @@ void main() {
         (WidgetTester tester) async {
       try {
         await tester.pumpWidget(
-          BlocBuilder<ThemeEvent, ThemeData>(
+          BlocBuilder<ThemeBloc, ThemeData>(
             bloc: ThemeBloc(),
             builder: null,
           ),
